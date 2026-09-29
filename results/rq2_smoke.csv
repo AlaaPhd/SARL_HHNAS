@@ -1,0 +1,9 @@
+rq,variant,dataset,budget,seed,best_val_acc,test_acc,search_auc,params,flops,final_regret,evaluations_to_target
+RQ2,full,cifar10,25,0,94.68,94.62,94.68,4.390000000000001,48.59,,
+RQ2,no_stagnation,cifar10,25,0,94.82,94.99,94.74719999999999,1.78,145.06,,
+RQ2,no_diversity,cifar10,25,0,94.68,94.62,94.68,4.390000000000001,48.59,,
+RQ2,no_budget,cifar10,25,0,94.68,94.62,94.68,4.390000000000001,48.59,,
+RQ2,no_complexity,cifar10,25,0,94.68,94.62,94.68,4.390000000000001,48.59,,
+RQ2,no_llh_history,cifar10,25,0,94.68,94.62,94.68,4.390000000000001,48.59,,
+RQ2,minimal,cifar10,25,0,94.82,94.99,94.7752,1.78,145.06,,
+RQ2,shuffled_state,cifar10,25,0,94.82,94.99,94.7976,1.78,145.06,,

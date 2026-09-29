@@ -1,0 +1,4 @@
+rq,beta,dataset,budget,seed,best_val_acc,test_acc,search_auc,params,flops,final_regret,evaluations_to_target
+RQ3,0.0,cifar10,25,0,94.82,94.99,94.75280000000001,1.78,145.06,,
+RQ3,0.01,cifar10,25,0,94.82,94.99,94.75840000000002,1.78,145.06,,
+RQ3,0.05,cifar10,25,0,94.83,94.99,94.69200000000001,2.4000000000000004,52.37,,
