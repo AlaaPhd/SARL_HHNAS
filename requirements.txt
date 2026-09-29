@@ -1,0 +1,7 @@
+numpy
+pandas
+scipy
+matplotlib
+torch
+pytest
+nats-bench
