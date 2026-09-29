@@ -1,4 +1,3 @@
-# SARL_HHNAS
 # SARL-HHNAS
 
 **State-Aware Reinforcement Learning Hyper-Heuristic for Neural Architecture Search**
