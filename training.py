@@ -9,7 +9,14 @@ def meta_train(benchmark, cfg, episodes=500, episode_budget=100):
     summaries=[]
     for ep in range(episodes):
         train_cfg.seed=cfg.seed+ep
-        result=SARLHHNAS(benchmark,train_cfg,agent=agent).run(training=True)
+        result=SARLHHNAS(
+            benchmark,
+            train_cfg,
+            agent=agent
+        ).run(
+            training=True,
+            query_test=False
+        )
         summaries.append(result['best_val_acc'])
     return agent, summaries
 
