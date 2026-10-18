@@ -1,0 +1,13 @@
+{
+  "identity": {
+    "archive": "/content/drive/MyDrive/NATS_Bench/TSS_FAST/NATS-tss-v1_0-3ffb9-simple",
+    "cost_dataset": "cifar100",
+    "hp": "200",
+    "count": 15625,
+    "architecture_sha256": "457b74e4474c1c06779253bb406a2d7657aa8a992b0508d5143db780adeb0606",
+    "nats_bench_version": "1.8"
+  },
+  "next_index": 15625,
+  "maximum_params": 1.537396,
+  "maximum_flops": 220.12554
+}

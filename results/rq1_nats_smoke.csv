@@ -1,0 +1,2 @@
+rq,dataset,budget,seed,method,best_val_acc,test_acc,search_auc,params,flops,final_regret,evaluations_to_target
+RQ1,cifar10,100,0,sarl,91.60666665039064,94.37333333333333,90.71531998611245,1.073466,153.27297,,
