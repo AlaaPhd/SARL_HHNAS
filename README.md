@@ -2,8 +2,8 @@
 
 ## SARL-HHNAS: State-Aware Reinforcement Learning Hyper-Heuristic for Cost-Efficient Neural Architecture Search in Deep Classification
 
-**Authors:** Alaa Khudhair Abbas and Saba Alaa Abdulwahhab
-
+**Authors:** ALAA KHUDHAIR ABBAS, SABA ALAA ABDULWAHHAB, ESAM TAHA YASSEN, AND BELAL
+AL-KHATEEB
 **SARL-HHNAS** is a research framework for Neural Architecture Search (NAS) that combines **reinforcement learning** with **hyper-heuristic search**.
 
 Instead of directly using reinforcement learning to construct a neural architecture, SARL-HHNAS learns **which low-level search heuristic should be applied according to the current state of the architecture search process**.
