@@ -54,10 +54,24 @@ class SearchCore:
     def temperature(self,evals):
         x=evals/max(1,self.c.budget); return self.c.t0*((self.c.tmin/self.c.t0)**x)
 
-    def finalize(self,best,bm,rows):
-        test = self.b.final_test(best,self.c.dataset) if hasattr(self.b,'final_test') else bm.get('test_acc', float('nan'))
-        return {'best_arch':best,'best_val_acc':bm['val_acc'],'test_acc':float(test),
-                'params':bm.get('params',0.0),'flops':bm.get('flops',0.0),'rows':rows}
+    def finalize(self,best,bm,rows,query_test=True):
+        # Test data must remain completely invisible during search/meta-training.
+        # It is queried only after the final architecture has been selected.
+        if query_test and hasattr(self.b, 'final_test'):
+            test = self.b.final_test(best, self.c.dataset)
+        elif query_test:
+            test = bm.get('test_acc', float('nan'))
+        else:
+            test = float('nan')
+
+        return {
+            'best_arch': best,
+            'best_val_acc': bm['val_acc'],
+            'test_acc': float(test),
+            'params': bm.get('params', 0.0),
+            'flops': bm.get('flops', 0.0),
+            'rows': rows
+        }
 
     def accept(self,old,new,evals):
         if new>=old: return True

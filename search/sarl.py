@@ -8,7 +8,7 @@ from search.core import SearchCore
 class SARLHHNAS(SearchCore):
     def __init__(self,benchmark,cfg,agent=None):
         super().__init__(benchmark,cfg); self.agent=agent or DDQNAgent(cfg)
-    def run(self,training=True,log_path=None):
+    def run(self,training=True,log_path=None,query_test=True):
         cur=Architecture.random(self.rng); cm=self.eval(cur); best=cur; bm=cm; evals=1; stagn=0; prev=cm['val_acc']/100.; rows=[{'evaluation':1,'arch':cur.to_nats_string(),'llh':'INIT','reward':0.0,'accepted':1,'current_val':cm['val_acc'],'best_val':bm['val_acc'],'epsilon':'','loss':''}]
         self.history.append(cur)
         while evals<self.c.budget:
@@ -33,4 +33,4 @@ class SARLHHNAS(SearchCore):
             os.makedirs(os.path.dirname(log_path) or '.',exist_ok=True)
             with open(log_path,'w',newline='') as f:
                 w=csv.DictWriter(f,fieldnames=rows[0].keys()); w.writeheader(); w.writerows(rows)
-        return self.finalize(best,bm,rows)
+        return self.finalize(best,bm,rows,query_test=query_test)
