@@ -844,7 +844,7 @@ If you use this repository in academic work, please cite the associated paper af
 AL-KHATEEB},
   title   = {SARL-HHNAS: State-Aware Reinforcement Learning Hyper-Heuristic for
              Cost-Efficient Neural Architecture Search in Deep Classification},
-  journal = {To appear},
+  journal = {Under Review},
   year    = {2026}
 }
 ```
